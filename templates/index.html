@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loki's Secret Page</title>
+    <style>
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+        text-align: center;
+        color: #60ba60;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        background-image: url("./../static/lokiBg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.95;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 88%;
+        z-index: -1;
+      }
+
+      .dialogue-box {
+        background: rgb(45 99 12 / 50%);
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        max-width: 60%;
+        margin-top: 20%;
+      }
+      .dialogue {
+        font-size: 2rem;
+        color: #ffcc00;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        /* animation: fadeIn 3s ease-in-out infinite alternate; */
+      }
+      /* @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      } */
+      .typing {
+        border-right: 0.05em solid #ffcc00;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3.5s steps(40, end), step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #ffcc00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dialogue-box">
+      <div class="dialogue typing">
+        "Haha! Nothing to see here... Can't help a mischief!"
+      </div>
+    </div>
+  </body>
+</html>
